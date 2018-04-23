@@ -4,7 +4,7 @@
     "version": "1.0.1",
     "minimum-stability": "dev",
     "type": "library",
-    "keywords": ["yii2企业微信"],
+    "keywords": ["企业微信封装"],
     "license": "MIT",
     "authors": [
         {
