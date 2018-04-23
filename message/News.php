@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models\workwx\message;
+namespace yeedomliu\workwx\message;
 
 class News extends Base
 {
@@ -8,19 +8,19 @@ class News extends Base
     /**
      * 图文消息，一个图文消息支持1到8条图文
      *
-     * @var \app\models\workwx\message\NewsArticle[]
+     * @var \yeedomliu\workwx\message\NewsArticle[]
      */
     protected $articles = [];
 
     /**
-     * @return \app\models\workwx\message\NewsArticle[]
+     * @return \yeedomliu\workwx\message\NewsArticle[]
      */
     public function getArticles(): array {
         return $this->articles;
     }
 
     /**
-     * @param \app\models\workwx\message\NewsArticle[] $articles
+     * @param \yeedomliu\workwx\message\NewsArticle[] $articles
      *
      * @return News
      */
@@ -31,7 +31,7 @@ class News extends Base
     }
 
     /**
-     * @param \app\models\workwx\message\NewsArticle $article
+     * @param \yeedomliu\workwx\message\NewsArticle $article
      *
      * @return News
      */

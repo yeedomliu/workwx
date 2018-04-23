@@ -58,7 +58,7 @@ class Send extends Base
     }
 
     /**
-     * @param \app\models\workwx\message\NewsArticle[] $newsArticles
+     * @param \yeedomliu\workwx\message\NewsArticle[] $newsArticles
      *
      * @return mixed
      */
