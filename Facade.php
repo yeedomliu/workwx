@@ -11,10 +11,10 @@ class Facade extends Component
      * @param        $url
      * @param string $method
      *
-     * @return \app\models\workwx\Request
+     * @return \yeedomliu\workwx\Request
      */
     static public function getRequestByUrl($url, $method = Request::METHOD_POST) {
-        $return = \Wii::app()->workwxRequest->setUrl($url);
+        $return = (new Request())->setUrl($url);
         if (Request::METHOD_POST == $method) {
             $return->setPostMethod();
         }
