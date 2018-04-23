@@ -8,7 +8,6 @@ use yeedomliu\workwx\common\AccessToken;
  * Class Request
  * 默认get请求、把json转换成数组返回、带企业微信接口请求前缀、后缀默认带上access token
  *
- * @package app\models\workwx
  */
 class Request extends \yii\base\Component
 {
@@ -190,7 +189,7 @@ class Request extends \yii\base\Component
     /**
      * @param bool $appendAccessToken
      *
-     * @return \app\models\workwx\Request
+     * @return \yeedomliu\workwx\Request
      */
     public function setAppendAccessToken(bool $appendAccessToken) {
         $this->appendAccessToken = $appendAccessToken;

@@ -2,7 +2,7 @@
 
 namespace yeedomliu\workwx;
 
-use app\models\workwx\media\Constant;
+use yeedomliu\workwx\media\Constant;
 
 class Media extends Base
 {
