@@ -2,7 +2,7 @@
 
 namespace yeedomliu\workwx;
 
-use app\models\workwx\common\AccessToken;
+use yeedomliu\workwx\common\AccessToken;
 
 /**
  * Class Request
