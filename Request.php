@@ -247,7 +247,7 @@ class Request extends \yii\base\Component
             throw new \Exception("unexpected http code " . intval($status["http_code"]));
         }
 
-        $return = ! $this->isRaw() ? Json::decode($output) : $output;
+        $return = ! $this->isRaw() ? json_decode($output, true) : $output;
         if (is_array($return)) {
             if (0 != $return['errcode']) {
             }

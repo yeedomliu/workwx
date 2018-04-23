@@ -2,6 +2,8 @@
 
 namespace yeedomliu\workwx\common;
 
+use yeedomliu\workwx\Request;
+
 class AccessToken extends \yeedomliu\workwx\Base
 {
 
@@ -12,9 +14,13 @@ class AccessToken extends \yeedomliu\workwx\Base
 
     public function getToken() {
         if (empty(self::$accessToken)) {
-            // 追加corpid/corpsecret参数
-            $config = \Wii::app()->workwxConfig;
-            $return = \Wii::app()->workwxRequest->setUrl("gettoken?corpid={$config->corpid}&corpsecret={$config->secret}")->setAppendAccessToken(false)->request();
+            /**
+             * 追加corpid/corpsecret参数
+             *
+             * @var \yeedomliu\workwx\Config $config
+             */
+            $config = \Yii::$app->workwxConfig;
+            $return = (new Request())->setUrl("gettoken?corpid={$config->corpid}&corpsecret={$config->secret}")->setAppendAccessToken(false)->request();
             if (0 != $return['errcode']) {
                 throw new \Exception("获取access token异常[{$return['errmsg']}]");
             }
