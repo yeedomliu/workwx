@@ -57,6 +57,13 @@ class Send extends Base
         return (new Request())->setUrl(self::RESOURCE_URL)->setPostMethod()->setJsonEncodeFields()->setFields($obj->getBody())->request();
     }
 
+    public function imageByMediaid($mediaId) {
+        $obj = (new Image())->setMediaId($mediaId)->setTouser($this->getToUser());
+
+        return (new Request())->setUrl(self::RESOURCE_URL)->setPostMethod()->setJsonEncodeFields()->setFields($obj->getBody())->request();
+    }
+
+
     /**
      * @param \yeedomliu\workwx\message\NewsArticle[] $newsArticles
      *

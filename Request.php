@@ -239,6 +239,8 @@ class Request extends \yii\base\Component
         $status = curl_getinfo($ch);
         curl_close($ch);
 
+        \Yii::info(['url' => $url, 'fields' => $fields, 'method' => $this->getMethod(), 'result' => $output], 'workwx.request_result');
+
         if ($output === false) {
             throw new \Exception("网络错误");
         }
