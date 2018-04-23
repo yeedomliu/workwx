@@ -1,11 +1,8 @@
 <?php
 
-namespace app\models\workwx\message;
+namespace yeedomliu\workwx\message;
 
-
-use wii\helpers\Json;
-
-abstract class Base extends \app\models\workwx\Base
+abstract class Base extends \yeedomliu\workwx\Base
 {
 
     /**
@@ -171,7 +168,7 @@ abstract class Base extends \app\models\workwx\Base
             $this->getType() => $this->getTypeContent(),
         ];
 
-        return Json::encode($return);
+        return json_encode($return);
     }
 
 }

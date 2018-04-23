@@ -1,11 +1,11 @@
 <?php
 
-namespace app\models\workwx\message;
+namespace yeedomliu\workwx\message;
 
-use app\models\workwx\Base;
-use app\models\workwx\Facade;
-use app\models\workwx\Media;
-use app\models\workwx\Request;
+use yeedomliu\workwx\Base;
+use yeedomliu\workwx\Facade;
+use yeedomliu\workwx\Media;
+use yeedomliu\workwx\Request;
 
 class Send extends Base
 {

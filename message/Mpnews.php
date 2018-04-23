@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models\workwx\message;
+namespace yeedomliu\workwx\message;
 
 class Mpnews extends News
 {
