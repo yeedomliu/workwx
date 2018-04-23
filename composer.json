@@ -2,6 +2,7 @@
     "name": "yeedomliu/workwx",
     "description": "企业微信封装",
     "version": "1.0.1",
+    "minimum-stability": "dev",
     "type": "library",
     "keywords": ["yii2企业微信"],
     "license": "MIT",
