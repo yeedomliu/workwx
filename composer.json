@@ -1,0 +1,21 @@
+{
+    "name": "yeedomliu/workwx",
+    "description": "企业微信封装",
+    "type": "library",
+    "keywords": ["yii2企业微信"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "yeedomliu",
+            "email": "yeedomliu@tencent.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "yeedomliu\\workwx\\": ""
+        }
+    }
+}
