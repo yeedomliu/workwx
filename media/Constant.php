@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models\workwx\media;
+namespace yeedomliu\workwx\media;
 
 class Constant
 {

@@ -1,10 +1,8 @@
 <?php
 
-namespace app\models\workwx\common;
+namespace yeedomliu\workwx\common;
 
-use app\models\workwx\Base;
-
-class AccessToken extends Base
+class AccessToken extends \yeedomliu\workwx\Base
 {
 
     /**
