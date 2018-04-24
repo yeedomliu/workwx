@@ -90,7 +90,7 @@ class Media extends Base
      *
      * @return mixed
      */
-    public function uploadimg($filename) {
+    public function uploadimgByFilename($filename) {
         return ((new Request())->setUrl("media/uploadimg")->setPostMethod()->setFields([
                                                                                            'media' => new \CURLFile(realpath($filename)),
                                                                                        ])->request())['url'];
