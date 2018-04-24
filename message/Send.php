@@ -124,8 +124,8 @@ class Send extends Base
         return $this->start((new Voice())->setMediaId($mediaId));
     }
 
-    public function textcard($mediaId) {
-        return $this->start((new Voice())->setMediaId($mediaId));
+    public function textcard($title, ) {
+        return $this->start((new Textcard())->setMediaId($mediaId));
     }
 
     /**
