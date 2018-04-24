@@ -3,6 +3,7 @@
 namespace yeedomliu\workwx\message;
 
 use yeedomliu\workwx\adapter\Config;
+use yeedomliu\workwx\Factory;
 
 abstract class Base extends \yeedomliu\workwx\Base
 {
@@ -113,7 +114,7 @@ abstract class Base extends \yeedomliu\workwx\Base
      * @return string
      */
     public function getAgentid(): string {
-        return empty($this->agentId) ? (new Config())->agentid : $this->agentId;
+        return empty($this->agentId) ? Factory::getConfig()->agentid : $this->agentId;
     }
 
     /**
