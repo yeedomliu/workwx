@@ -10,6 +10,14 @@ namespace yeedomliu\workwx;
 class Card extends Base
 {
 
+    /**
+     * 
+     *
+     * @param $cardId      发票id
+     * @param $encryptCode 加密code
+     *
+     * @return mixed
+     */
     public function detail($cardId, $encryptCode) {
         return ((new Request())->setFields([
                                                'card_id'      => $cardId,
