@@ -61,15 +61,13 @@ class Card extends Base
                                            ])->setUrl("card/invoice/reimburse/updateinvoicestatus")->setPostMethod()->request());
     }
 
-    public function batchUpdate($openid, ) {
+    public function batchUpdate($openid, $reimburse_status, $invoice_list, $card_id, $encrypt_code) {
         return ((new Request())->setFields([
                                                'card_id'          => $cardId,
                                                'encrypt_code'     => $encryptCode,
                                                'reimburse_status' => $reimburseStatus,
                                            ])->setUrl("card/invoice/reimburse/updateinvoicestatus")->setPostMethod()->request());
     }
-
-
 
 
 }
