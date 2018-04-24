@@ -27,7 +27,12 @@ class Card extends Base
                                            ])->setUrl("card/invoice/reimburse/getinvoiceinfo")->setPostMethod()->request());
     }
 
+    public function update($cardId, $encryptCode) {
+        return ((new Request())->setFields([
+                                               'card_id'      => $cardId,
+                                               'encrypt_code' => $encryptCode,
+                                           ])->setUrl("card/invoice/reimburse/getinvoiceinfo")->setPostMethod()->request());
+    }
 
-    
 
 }
