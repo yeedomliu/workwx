@@ -116,6 +116,19 @@ class Send extends \yeedomliu\workwx\message\Send
     }
 
     /**
+     * 文件消息
+     *
+     * @link http://work.weixin.qq.com/api/doc#10167/%E6%96%87%E4%BB%B6%E6%B6%88%E6%81%AF
+     *
+     * @param $mediaId
+     *
+     * @return mixed
+     */
+    public function file($mediaId) {
+        return $this->start((new File())->setMediaId($mediaId));
+    }
+
+    /**
      * 文本卡片消息
      *
      * @link http://work.weixin.qq.com/api/doc#10167/%E6%96%87%E6%9C%AC%E5%8D%A1%E7%89%87%E6%B6%88%E6%81%AF
