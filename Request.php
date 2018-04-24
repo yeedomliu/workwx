@@ -146,6 +146,17 @@ class Request extends \yii\base\Component
     }
 
     /**
+     * 设置get方法
+     *
+     * @return $this
+     */
+    public function setGetMethod() {
+        $this->method = self::METHOD_GET;
+
+        return $this;
+    }
+
+    /**
      * 是否是post请求
      *
      * @return bool
