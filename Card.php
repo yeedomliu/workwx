@@ -28,7 +28,24 @@ class Card extends Base
     }
 
     /**
+     * 发票初始状态，未锁定
+     */
+    const STATUS_INIT = 'INVOICE_REIMBURSE_INIT';
+
+    /**
+     * 发票已锁定，无法重复提交报销
+     */
+    const STATUS_LOCK = 'INVOICE_REIMBURSE_LOCK';
+
+    /**
+     * 发票已核销，从用户卡包中移除
+     */
+    const STATUS_CLOSURE = 'INVOICE_REIMBURSE_CLOSURE';
+
+    /**
      * 更新发票状态
+     *
+     * @link https://work.weixin.qq.com/api/doc#11633
      *
      * @param $cardId          发票id
      * @param $encryptCode     加密code
@@ -43,6 +60,16 @@ class Card extends Base
                                                'reimburse_status' => $reimburseStatus,
                                            ])->setUrl("card/invoice/reimburse/updateinvoicestatus")->setPostMethod()->request());
     }
+
+    public function update($cardId, $encryptCode, $reimburseStatus) {
+        return ((new Request())->setFields([
+                                               'card_id'          => $cardId,
+                                               'encrypt_code'     => $encryptCode,
+                                               'reimburse_status' => $reimburseStatus,
+                                           ])->setUrl("card/invoice/reimburse/updateinvoicestatus")->setPostMethod()->request());
+    }
+
+
 
 
 }
