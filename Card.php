@@ -10,7 +10,7 @@ namespace yeedomliu\workwx;
 class Card extends Base
 {
 
-    public function getData($opencheckindatatype, $starttime, $endtime, $useridlist) {
+    public function detail($card_id, $encrypt_code) {
         return ((new Request())->setFields([
                                                'opencheckindatatype' => $opencheckindatatype,
                                                'starttime'           => $starttime,
