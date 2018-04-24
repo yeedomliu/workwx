@@ -125,9 +125,10 @@ class Send extends Base
     }
 
     /**
-     * 图文消息
+     * 图文消息（mpnews）
+     * 
      *
-     * @link http://work.weixin.qq.com/api/doc#10167/%E5%9B%BE%E6%96%87%E6%B6%88%E6%81%AF
+     * @link http://work.weixin.qq.com/api/doc#10167/%E5%9B%BE%E6%96%87%E6%B6%88%E6%81%AF%EF%BC%88mpnews%EF%BC%89
      *
      * @param \yeedomliu\workwx\message\MpnewsArticle[] $mpnewsArticles
      *
