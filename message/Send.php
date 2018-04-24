@@ -111,8 +111,17 @@ class Send extends Base
         return $this->start((new Video())->setTitle($title)->setDescription($desc)->setMediaId($mediaId));
     }
 
+    /**
+     * 语音消息
+     *
+     * @link http://work.weixin.qq.com/api/doc#10167/%E8%AF%AD%E9%9F%B3%E6%B6%88%E6%81%AF
+     *
+     * @param $mediaId
+     *
+     * @return mixed
+     */
     public function voice($mediaId) {
-        return $this->start((new Voice())->setTitle($title)->setDescription($desc)->setMediaId($mediaId));
+        return $this->start((new Voice())->setMediaId($mediaId));
     }
 
     /**
