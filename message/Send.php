@@ -111,6 +111,10 @@ class Send extends Base
         return $this->start((new Video())->setTitle($title)->setDescription($desc)->setMediaId($mediaId));
     }
 
+    public function voice($mediaId) {
+        return $this->start((new Voice())->setTitle($title)->setDescription($desc)->setMediaId($mediaId));
+    }
+
     /**
      * 图文消息
      *
