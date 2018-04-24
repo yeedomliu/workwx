@@ -126,7 +126,8 @@ class Send extends Base
 
     /**
      * 图文消息（mpnews）
-     * 
+     * mpnews类型的图文消息，跟普通的图文消息一致，唯一的差异是图文内容存储在企业微信。
+     * 多次发送mpnews，会被认为是不同的图文，阅读、点赞的统计会被分开计算。
      *
      * @link http://work.weixin.qq.com/api/doc#10167/%E5%9B%BE%E6%96%87%E6%B6%88%E6%81%AF%EF%BC%88mpnews%EF%BC%89
      *
