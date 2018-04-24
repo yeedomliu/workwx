@@ -54,13 +54,13 @@ class Send extends Base
         $mediaId = ((new Media())->setType(Constant::TYPE_IMAGE)->upload($filename))['media_id']; // 上传图片得到media_id
         $obj = (new Image())->setMediaId($mediaId)->setTouser($this->getToUser());
 
-        return (new Request())->setUrl(self::RESOURCE_URL)->setPostMethod()->setJsonEncodeFields()->setFields($obj->getBody())->request();
+        return (new Request())->setUrl(self::RESOURCE_URL)->setPostMethod()->setFields($obj->getBody())->request();
     }
 
     public function imageByMediaid($mediaId) {
         $obj = (new Image())->setMediaId($mediaId)->setTouser($this->getToUser());
 
-        return (new Request())->setUrl(self::RESOURCE_URL)->setPostMethod()->setJsonEncodeFields()->setFields($obj->getBody())->request();
+        return (new Request())->setUrl(self::RESOURCE_URL)->setPostMethod()->setFields($obj->getBody())->request();
     }
 
 

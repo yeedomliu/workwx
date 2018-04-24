@@ -252,6 +252,7 @@ class Request extends \yii\base\Component
         $return = ! $this->isRaw() ? json_decode($output, true) : $output;
         if (is_array($return)) {
             if (0 != $return['errcode']) {
+                throw new \Exception("调用接口出现错误[{$return['errmsg']}]");
             }
         }
 
