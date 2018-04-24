@@ -8,27 +8,27 @@ abstract class Base extends \yeedomliu\workwx\Base
     /**
      * @var string
      */
-    protected $touser = '';
+    protected $toUser = '';
 
     /**
      * @var string
      */
-    protected $toparty = '';
+    protected $toParty = '';
 
     /**
      * @var string
      */
-    protected $totag = '';
+    protected $toTag = '';
 
     /**
      * @var string
      */
-    protected $msgtype = 'text';
+    protected $msgType = 'text';
 
     /**
      * @var string
      */
-    protected $agentid = '';
+    protected $agentId = '';
 
     /**
      * @var int
@@ -39,7 +39,7 @@ abstract class Base extends \yeedomliu\workwx\Base
      * @return string
      */
     public function getTouser(): string {
-        return $this->touser;
+        return $this->toUser;
     }
 
     /**
@@ -47,8 +47,8 @@ abstract class Base extends \yeedomliu\workwx\Base
      *
      * @return Base
      */
-    public function setTouser(string $touser): Base {
-        $this->touser = $touser;
+    public function setToUser(string $touser): Base {
+        $this->toUser = $touser;
 
         return $this;
     }
@@ -57,7 +57,7 @@ abstract class Base extends \yeedomliu\workwx\Base
      * @return string
      */
     public function getToparty(): string {
-        return $this->toparty;
+        return $this->toParty;
     }
 
     /**
@@ -66,7 +66,7 @@ abstract class Base extends \yeedomliu\workwx\Base
      * @return Base
      */
     public function setToparty(string $toparty): Base {
-        $this->toparty = $toparty;
+        $this->toParty = $toparty;
 
         return $this;
     }
@@ -75,7 +75,7 @@ abstract class Base extends \yeedomliu\workwx\Base
      * @return string
      */
     public function getTotag(): string {
-        return $this->totag;
+        return $this->toTag;
     }
 
     /**
@@ -84,7 +84,7 @@ abstract class Base extends \yeedomliu\workwx\Base
      * @return Base
      */
     public function setTotag(string $totag): Base {
-        $this->totag = $totag;
+        $this->toTag = $totag;
 
         return $this;
     }
@@ -93,7 +93,7 @@ abstract class Base extends \yeedomliu\workwx\Base
      * @return string
      */
     public function getMsgtype(): string {
-        return $this->msgtype;
+        return $this->msgType;
     }
 
     /**
@@ -102,7 +102,7 @@ abstract class Base extends \yeedomliu\workwx\Base
      * @return Base
      */
     public function setMsgtype(string $msgtype): Base {
-        $this->msgtype = $msgtype;
+        $this->msgType = $msgtype;
 
         return $this;
     }
@@ -111,7 +111,7 @@ abstract class Base extends \yeedomliu\workwx\Base
      * @return string
      */
     public function getAgentid(): string {
-        return empty($this->agentid) ? \Wii::app()->workwxConfig->agentid : $this->agentid;
+        return empty($this->agentId) ? \Wii::app()->workwxConfig->agentid : $this->agentId;
     }
 
     /**
@@ -120,7 +120,7 @@ abstract class Base extends \yeedomliu\workwx\Base
      * @return Base
      */
     public function setAgentid(string $agentid): Base {
-        $this->agentid = $agentid;
+        $this->agentId = $agentid;
 
         return $this;
     }
@@ -157,6 +157,11 @@ abstract class Base extends \yeedomliu\workwx\Base
      */
     abstract public function getTypeContent();
 
+    /**
+     * 获取请求体json
+     *
+     * @return string
+     */
     public function getBody() {
         $return = [
             'touser'         => $this->getTouser(),
