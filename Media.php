@@ -68,10 +68,38 @@ class Media extends Base
                                            ])->setUrl("media/upload?type={$this->getType()}")->setPostMethod()->request());
     }
 
+    /**
+     * 获取临时素材
+     * 完全公开，media_id在同一企业内所有应用之间可以共享。
+     *
+     * @link http://work.weixin.qq.com/api/doc#10115
+     *
+     * @param $mediaId 媒体文件id
+     *
+     * @return string 图片二进制数码,正确时返回（和普通的http下载相同，请根据http头做相应的处理）：
+     */
     public function detail($mediaId) {
         return ((new Request())->setFields([
                                                'media_id' => $mediaId,
-                                           ])->setUrl("media/get")->setPostMethod()->request());
+                                           ])->setUrl("media/get")->setRaw(true)->request());
+    }
+
+    /**
+     * 获取高清语音素材
+     * 可以使用本接口获取从JSSDK的uploadVoice接口上传的临时语音素材，格式为speex，16K采样率。该音频比上文的临时素材获取接口（格式为amr，8K采样率）更加清晰，适合用作语音识别等对音质要求较高的业务。
+     * 仅企业微信2.4及以上版本支持。
+     *
+     *
+     * @link http://work.weixin.qq.com/api/doc#12250
+     *
+     * @param $mediaId
+     *
+     * @return string 正确时返回（和普通的http下载相同，请根据http头做相应的处理）：
+     */
+    public function jssdkDetail($mediaId) {
+        return ((new Request())->setFields([
+                                               'media_id' => $mediaId,
+                                           ])->setUrl("media/get/jssdk")->setRaw(true)->request());
     }
 
     /**
