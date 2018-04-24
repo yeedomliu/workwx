@@ -3,6 +3,11 @@
 namespace yeedomliu\workwx;
 
 
+/**
+ * 群聊会话
+ *
+ * @package yeedomliu\workwx
+ */
 class Appchat extends Base
 {
 
