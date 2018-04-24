@@ -129,12 +129,12 @@ class Send extends Base
      *
      * @link http://work.weixin.qq.com/api/doc#10167/%E5%9B%BE%E6%96%87%E6%B6%88%E6%81%AF
      *
-     * @param \yeedomliu\workwx\message\NewsArticle[] $newsArticles
+     * @param \yeedomliu\workwx\message\MpnewsArticle[] $mpnewsArticles
      *
      * @return mixed
      */
-    public function mpnews($newsArticles) {
-        return $this->start((new News())->setArticles($newsArticles));
+    public function mpnews($mpnewsArticles) {
+        return $this->start((new Mpnews())->setArticles($mpnewsArticles));
     }
 
 }
