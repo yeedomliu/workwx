@@ -68,8 +68,10 @@ class Media extends Base
                                            ])->setUrl("media/upload?type={$this->getType()}")->setPostMethod()->request());
     }
 
-    public function detail(){
-        
+    public function detail($mediaId) {
+        return ((new Request())->setFields([
+                                               'media_id' => $mediaId,
+                                           ])->setUrl("media/upload?type={$this->getType()}")->setPostMethod()->request());
     }
 
     /**
