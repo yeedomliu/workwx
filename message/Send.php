@@ -3,7 +3,6 @@
 namespace yeedomliu\workwx\message;
 
 use yeedomliu\workwx\Base;
-use yeedomliu\workwx\Facade;
 use yeedomliu\workwx\Media;
 use yeedomliu\workwx\Request;
 

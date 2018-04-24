@@ -1,10 +1,8 @@
 <?php
 
-namespace yeedomliu\workwx;
+namespace yeedomliu\workwx\adapter;
 
-use yii\base\Component;
-
-class Config extends Component
+class Config
 {
 
     /**

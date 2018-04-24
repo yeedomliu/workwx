@@ -2,6 +2,8 @@
 
 namespace yeedomliu\workwx\message;
 
+use yeedomliu\workwx\adapter\Config;
+
 abstract class Base extends \yeedomliu\workwx\Base
 {
 
@@ -111,7 +113,7 @@ abstract class Base extends \yeedomliu\workwx\Base
      * @return string
      */
     public function getAgentid(): string {
-        return empty($this->agentId) ? \Wii::app()->workwxConfig->agentid : $this->agentId;
+        return empty($this->agentId) ? (new Config())->agentid : $this->agentId;
     }
 
     /**
