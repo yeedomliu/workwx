@@ -64,7 +64,7 @@ class User extends Base
      *
      * @return mixed
      */
-    public function simplelist($departmentId, $fetchChild = 0) {
+    public function simpleList($departmentId, $fetchChild = 0) {
         return ((new Request())->setUrl("user/simplelist")->setFields([
                                                                           'department_id' => $departmentId,
                                                                           'fetch_child'   => $fetchChild,
@@ -81,11 +81,37 @@ class User extends Base
      *
      * @return mixed
      */
-    public function list($departmentId, $fetchChild = 0) {
+    public function getList($departmentId, $fetchChild = 0) {
         return ((new Request())->setUrl("user/list")->setFields([
                                                                     'department_id' => $departmentId,
                                                                     'fetch_child'   => $fetchChild,
                                                                 ])->request());
+    }
+
+    /**
+     * 根据code获取成员信息
+     *
+     * @link https://work.weixin.qq.com/api/doc#10028
+     *
+     * @param $code
+     *
+     * @return mixed
+     */
+    public function getUserinfo($code) {
+        return ((new Request())->setUrl("user/getuserinfo")->setFields(['code' => $code])->request());
+    }
+
+    /**
+     * 使用user_ticket获取成员详情
+     *
+     * @link https://work.weixin.qq.com/api/doc#10028
+     *
+     * @param $userTicket
+     *
+     * @return mixed
+     */
+    public function getUserdetail($userTicket) {
+        return ((new Request())->setUrl("user/getuserdetail")->setFields(['user_ticket' => $userTicket])->request());
     }
 
     /**
