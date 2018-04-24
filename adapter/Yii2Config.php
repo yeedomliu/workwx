@@ -2,7 +2,7 @@
 
 namespace yeedomliu\workwx\adapter;
 
-class Config
+class Yii2Config extends Config
 {
 
     public function getAgentId() {
