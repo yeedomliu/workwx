@@ -88,7 +88,7 @@ class Media extends Base
      *
      * @param $filename
      *
-     * @return mixed
+     * @return string 图片的url地址
      */
     public function uploadimgByFilename($filename) {
         return ((new Request())->setUrl("media/uploadimg")->setPostMethod()->setFields([
