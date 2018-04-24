@@ -25,12 +25,13 @@ class Checkin extends Base
     }
 
     /**
-     * 
+     * 获取打卡数据
+     *
      * @link https://work.weixin.qq.com/api/doc#11196
      *
-     * @param $opencheckindatatype
-     * @param $starttime
-     * @param $endtime
+     * @param $opencheckindatatype 打卡类型。1：上下班打卡；2：外出打卡；3：全部打卡
+     * @param $starttime           获取打卡记录的开始时间。Unix时间戳
+     * @param $endtime             获取打卡记录的结束时间。Unix时间戳
      * @param $useridlist
      *
      * @return mixed
