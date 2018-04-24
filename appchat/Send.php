@@ -35,7 +35,7 @@ class Send extends \yeedomliu\workwx\message\Send
     /**
      * 群聊消息多chatid字段
      *
-     * @param \yeedomliu\workwx\message\Image|\yeedomliu\workwx\message\Mpnews|\yeedomliu\workwx\message\News|\yeedomliu\workwx\message\Text|\yeedomliu\workwx\message\Textcard|\yeedomliu\workwx\message\Video $obj
+     * @param \yeedomliu\workwx\appchat\File|\yeedomliu\workwx\appchat\Image|\yeedomliu\workwx\appchat\Video|\yeedomliu\workwx\appchat\Voice|\yeedomliu\workwx\appchat\Textcard|\yeedomliu\workwx\appchat\Text|\yeedomliu\workwx\appchat\News|\yeedomliu\workwx\appchat\Mpnews $obj
      *
      * @return mixed
      */

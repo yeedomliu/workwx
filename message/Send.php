@@ -47,7 +47,7 @@ class Send extends Base
     /**
      * 开始发送信息
      *
-     * @param \yeedomliu\workwx\message\Text|\yeedomliu\workwx\message\Image|\yeedomliu\workwx\message\Video|\yeedomliu\workwx\message\Textcard|\yeedomliu\workwx\message\News|\yeedomliu\workwx\message\Mpnews $obj
+     * @param \yeedomliu\workwx\message\File|\yeedomliu\workwx\message\Image|\yeedomliu\workwx\message\Mpnews|\yeedomliu\workwx\message\News|\yeedomliu\workwx\message\Text|\yeedomliu\workwx\message\Textcard|\yeedomliu\workwx\message\Video|\yeedomliu\workwx\message\Voice $obj
      *
      * @return mixed
      */
