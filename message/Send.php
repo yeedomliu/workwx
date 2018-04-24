@@ -62,16 +62,14 @@ class Send extends Base
 
         return (new Request())->setUrl(self::RESOURCE_URL)->setPostMethod()->setFields($obj->getBody())->request();
     }
-
-
+    
     /**
      * @param \yeedomliu\workwx\message\NewsArticle[] $newsArticles
      *
      * @return mixed
      */
     public function news($newsArticles) {
-        $obj = new News();
-        $obj = $obj->setArticles($newsArticles)->setTouser($this->getToUser());
+        $obj = (new News())->setArticles($newsArticles)->setTouser($this->getToUser());
 
         return $this->getRequest()->setFields($obj->getBody())->request();
     }
