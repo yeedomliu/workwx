@@ -68,6 +68,10 @@ class Media extends Base
                                            ])->setUrl("media/upload?type={$this->getType()}")->setPostMethod()->request());
     }
 
+    public function detail(){
+        
+    }
+
     /**
      * 上传图片
      * 上传图片得到图片URL，该URL永久有效
