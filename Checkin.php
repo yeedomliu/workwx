@@ -2,6 +2,11 @@
 
 namespace yeedomliu\workwx;
 
+/**
+ * 打卡
+ *
+ * @package yeedomliu\workwx
+ */
 class Checkin extends Base
 {
 
