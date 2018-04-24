@@ -32,7 +32,10 @@ class Checkin extends Base
      * @param $opencheckindatatype 打卡类型。1：上下班打卡；2：外出打卡；3：全部打卡
      * @param $starttime           获取打卡记录的开始时间。Unix时间戳
      * @param $endtime             获取打卡记录的结束时间。Unix时间戳
-     * @param $useridlist
+     * @param $useridlist          需要获取打卡记录的用户列表
+     *                             1.获取记录时间跨度不超过三个月
+     *                             2.用户列表不超过100个。若用户超过100个，请分批获取
+     *                             3.有打卡记录即可获取打卡数据，与当前”打卡应用”是否开启无关
      *
      * @return mixed
      */
