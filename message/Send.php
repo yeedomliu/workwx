@@ -124,8 +124,20 @@ class Send extends Base
         return $this->start((new Voice())->setMediaId($mediaId));
     }
 
+    /**
+     * 文本卡片消息
+     *
+     * @link http://work.weixin.qq.com/api/doc#10167/%E6%96%87%E6%9C%AC%E5%8D%A1%E7%89%87%E6%B6%88%E6%81%AF
+     *
+     * @param        $title  标题，不超过128个字节，超过会自动截断
+     * @param        $desc   描述，不超过512个字节，超过会自动截断
+     * @param        $url    点击后跳转的链接。
+     * @param string $btntxt 按钮文字。 默认为“详情”， 不超过4个文字，超过自动截断。
+     *
+     * @return mixed
+     */
     public function textcard($title, $desc, $url, $btntxt = '') {
-        return $this->start((new Textcard())->setMediaId($mediaId));
+        return $this->start((new Textcard())->setTitle($title)->setDescription($desc)->setUrl($url)->setBtntxt($btntxt));
     }
 
     /**
