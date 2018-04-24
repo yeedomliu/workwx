@@ -10,11 +10,11 @@ namespace yeedomliu\workwx;
 class Card extends Base
 {
 
-    public function detail($card_id, $encrypt_code) {
+    public function detail($cardId, $encryptCode) {
         return ((new Request())->setFields([
-                                               'card_id'      => $card_id,
-                                               'encrypt_code' => $encrypt_code,
-                                           ])->setUrl("checkin/getcheckindata")->setPostMethod()->request());
+                                               'card_id'      => $cardId,
+                                               'encrypt_code' => $encryptCode,
+                                           ])->setUrl("card/invoice/reimburse/getinvoiceinfo")->setPostMethod()->request());
     }
 
     /**
