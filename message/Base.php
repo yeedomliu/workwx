@@ -144,6 +144,31 @@ abstract class Base extends \yeedomliu\workwx\Base
     }
 
     /**
+     * chatid所代表的群必须是该应用所创建
+     *
+     * @var string
+     */
+    protected $chatId = '';
+
+    /**
+     * @return string
+     */
+    public function getChatId() {
+        return $this->chatId;
+    }
+
+    /**
+     * @param string $chatId
+     *
+     * @return Base
+     */
+    public function setChatId($chatId) {
+        $this->chatId = $chatId;
+
+        return $this;
+    }
+
+    /**
      * 获取类型
      *
      * @return mixed
@@ -162,7 +187,7 @@ abstract class Base extends \yeedomliu\workwx\Base
      *
      * @return string
      */
-    public function getBody() {
+    public function getBody($jsonEncode = true) {
         $return = [
             'touser'         => $this->getTouser(),
             'toparty'        => $this->getToparty(),
@@ -172,8 +197,11 @@ abstract class Base extends \yeedomliu\workwx\Base
             'safe'           => $this->getSafe(),
             $this->getType() => $this->getTypeContent(),
         ];
+        if ($this->getChatId()) {
+            $return['chatid'] = $this->getChatId();
+        }
 
-        return json_encode($return);
+        return $jsonEncode ? json_encode($return) : $return;
     }
 
 }

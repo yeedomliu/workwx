@@ -11,14 +11,16 @@ namespace yeedomliu\workwx;
 class Appchat extends Base
 {
 
-    public function getList() {
-        return ((new Request())->setUrl('agent/list')->request())['agentlist'];
+    public function create($fields) {
+        return ((new Request())->setUrl("appchat/create")->setPostMethod()->setFields($fields)->request());
     }
 
-    public function getDetail($agentId = '') {
-        empty($agentId) && ($agentId = $this->getList()[0]['agentid']);
+    public function update($fields) {
+        return ((new Request())->setUrl("appchat/update")->setPostMethod()->setFields($fields)->request());
+    }
 
-        return (new Request())->setUrl("agent/get?agentid={$agentId}")->request();
+    public function detail($chatId) {
+        return ((new Request())->setUrl("appchat/get")->setGetMethod()->setFields(['chatid' => $chatId])->request());
     }
 
 }

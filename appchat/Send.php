@@ -1,64 +1,55 @@
 <?php
 
-namespace yeedomliu\workwx\message;
+namespace yeedomliu\workwx\appchat;
 
-use yeedomliu\workwx\Base;
-use yeedomliu\workwx\Facade;
 use yeedomliu\workwx\Media;
-use yeedomliu\workwx\Request;
 
-class Send extends Base
+class Send extends \yeedomliu\workwx\message\Send
 {
 
-    const RESOURCE_URL = 'message/send';
+    const RESOURCE_URL = 'appchat/send';
 
     /**
-     *
-     *
-     * @var string|array
+     * @var string
      */
-    protected $toUser = '';
+    protected $chatId = '';
 
     /**
-     * @return array|string
+     * @return string
      */
-    public function getToUser() {
-        return $this->toUser;
+    public function getChatId() {
+        return $this->chatId;
     }
 
     /**
-     * @param array|string $toUser
+     * @param string $chatId
      *
      * @return Send
      */
-    public function setToUser($toUser) {
-        $this->toUser = $toUser;
+    public function setChatId($chatId) {
+        $this->chatId = $chatId;
 
         return $this;
     }
 
     /**
-     * @return Request
-     */
-    public function getRequest() {
-        return (new Request())->setUrl(self::RESOURCE_URL)->setPostMethod();
-    }
-
-    /**
-     * 开始发送信息
+     * 群聊消息多chatid字段
      *
-     * @param \yeedomliu\workwx\message\Text|\yeedomliu\workwx\message\Image|\yeedomliu\workwx\message\Video|\yeedomliu\workwx\message\Textcard|\yeedomliu\workwx\message\News|\yeedomliu\workwx\message\Mpnews $obj
+     * @param \yeedomliu\workwx\message\Image|\yeedomliu\workwx\message\Mpnews|\yeedomliu\workwx\message\News|\yeedomliu\workwx\message\Text|\yeedomliu\workwx\message\Textcard|\yeedomliu\workwx\message\Video $obj
      *
      * @return mixed
      */
     public function start($obj) {
-        return $this->getRequest()->setFields($obj->setToUser($this->getToUser())->getBody())->request();
+        $obj->setChatId($this->getChatId());
+
+        return parent::start($obj);
     }
+
 
     /**
      * 文本消息
      *
-     * @link http://work.weixin.qq.com/api/doc#10167/%E6%96%87%E6%9C%AC%E6%B6%88%E6%81%AF
+     * @link http://work.weixin.qq.com/api/doc#13294/%E6%96%87%E6%9C%AC%E6%B6%88%E6%81%AF
      *
      * @param $content
      *
