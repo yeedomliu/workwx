@@ -30,9 +30,9 @@ class Card extends Base
     /**
      * 更新发票状态
      *
-     * @param $cardId 
-     * @param $encryptCode
-     * @param $reimburseStatus
+     * @param $cardId          发票id
+     * @param $encryptCode     加密code
+     * @param $reimburseStatus 发报销状态 INVOICE_REIMBURSE_INIT：发票初始状态，未锁定；INVOICE_REIMBURSE_LOCK：发票已锁定，无法重复提交报销;INVOICE_REIMBURSE_CLOSURE:发票已核销，从用户卡包中移除
      *
      * @return mixed
      */
