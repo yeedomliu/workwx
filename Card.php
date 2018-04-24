@@ -12,10 +12,8 @@ class Card extends Base
 
     public function detail($card_id, $encrypt_code) {
         return ((new Request())->setFields([
-                                               'opencheckindatatype' => $opencheckindatatype,
-                                               'starttime'           => $starttime,
-                                               'endtime'             => $endtime,
-                                               'useridlist'          => $useridlist,
+                                               'card_id'      => $card_id,
+                                               'encrypt_code' => $encrypt_code,
                                            ])->setUrl("checkin/getcheckindata")->setPostMethod()->request());
     }
 
