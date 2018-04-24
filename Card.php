@@ -27,6 +27,15 @@ class Card extends Base
                                            ])->setUrl("card/invoice/reimburse/getinvoiceinfo")->setPostMethod()->request());
     }
 
+    /**
+     * 更新发票状态
+     *
+     * @param $cardId 
+     * @param $encryptCode
+     * @param $reimburseStatus
+     *
+     * @return mixed
+     */
     public function update($cardId, $encryptCode, $reimburseStatus) {
         return ((new Request())->setFields([
                                                'card_id'          => $cardId,
