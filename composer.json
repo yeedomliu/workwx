@@ -1,9 +1,9 @@
 {
     "name": "yeedomliu/workwx",
-    "description": "企业微信封装",
+    "description": "企业微信php封装",
     "version": "1.0.1",
     "type": "library",
-    "keywords": ["企业微信封装"],
+    "keywords": ["企业微信php封装"],
     "license": "MIT",
     "authors": [
         {
