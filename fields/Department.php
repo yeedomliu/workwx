@@ -6,7 +6,7 @@ trait Department
 {
 
     /**
-     * 成员所属部门id列表,不超过20个
+     * 成员所属部门id列表，不超过20个
      *
      * @var string
      */
