@@ -6,7 +6,7 @@ trait Userlist
 {
 
     /**
-     * 企业成员ID列表，注意：userlist、partylist不能同时为空，单次请求长度不超过1000
+     * 群成员id列表。至少2人，至多500人
      *
      * @var string
      */

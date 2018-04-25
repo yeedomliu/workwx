@@ -2,35 +2,13 @@
 
 namespace yeedomliu\workwx\message;
 
+use yeedomliu\workwx\fields\Content;
+
 class Text extends Base
 {
 
-    /**
-     * 消息内容，最长不超过2048个字节
-     *
-     * @var string
-     */
-    protected $content = '';
-
-    /**
-     * @return string
-     */
-    public function getContent(): string {
-        return $this->content;
-    }
-
-    /**
-     * @param string $content
-     *
-     * @return Text
-     */
-    public function setContent(string $content): Text {
-        $this->content = $content;
-
-        return $this;
-    }
-
-
+    use Content;
+    
     public function getType() {
         return Constant::TYPE_TEXT;
     }
