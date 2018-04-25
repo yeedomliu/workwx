@@ -6,7 +6,7 @@ trait MediaId
 {
 
     /**
-     * 上传的csv文件的media_id
+     * 媒体文件上传后获取的唯一标识，3天内有效
      *
      * @var string
      */
