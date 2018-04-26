@@ -8,19 +8,19 @@ trait ArticleArray
     /**
      * 图文消息，一个图文消息支持1到8条图文
      *
-     * @var array
+     * @var NewsArticle[]
      */
     protected $articles = [];
 
     /**
-     * @return array
+     * @return \yeedomliu\workwx\fields\NewsArticle[]
      */
     public function getArticles() {
         return $this->articles;
     }
 
     /**
-     * @param array $articles
+     * @param \yeedomliu\workwx\fields\NewsArticle[] $articles
      *
      * @return $this
      */
