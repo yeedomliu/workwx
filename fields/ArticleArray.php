@@ -31,6 +31,8 @@ trait ArticleArray
     }
 
     /**
+     * 添加文章
+     *
      * @param \yeedomliu\workwx\fields\NewsArticle $article
      *
      * @return $this
