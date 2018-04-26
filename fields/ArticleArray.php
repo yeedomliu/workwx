@@ -30,5 +30,16 @@ trait ArticleArray
         return $this;
     }
 
+    /**
+     * @param \yeedomliu\workwx\fields\NewsArticle $article
+     *
+     * @return $this
+     */
+    public function addArticle(NewsArticle $article) {
+        $this->articles[] = $article;
+
+        return $this;
+    }
+
 
 }
