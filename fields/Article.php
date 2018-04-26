@@ -2,7 +2,7 @@
 
 namespace yeedomliu\workwx\fields;
 
-trait Articles
+trait Article
 {
 
     /**
@@ -10,22 +10,22 @@ trait Articles
      *
      * @var string
      */
-    protected $articles = '';
+    protected $article = '';
 
     /**
      * @return string
      */
-    public function getArticles(): string {
-        return $this->articles;
+    public function getArticle() {
+        return $this->article;
     }
 
     /**
-     * @param string $articles
+     * @param string $article
      *
      * @return $this
      */
-    public function setArticles(string $articles): Articles {
-        $this->articles = $articles;
+    public function setArticle($article) {
+        $this->article = $article;
 
         return $this;
     }
