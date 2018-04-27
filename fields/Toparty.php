@@ -24,7 +24,7 @@ trait Toparty
      *
      * @return $this
      */
-    public function setToparty(string $toparty): Toparty {
+    public function setToparty(string $toparty) {
         $this->toparty = $toparty;
 
         return $this;

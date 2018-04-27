@@ -24,7 +24,7 @@ trait Safe
      *
      * @return $this
      */
-    public function setSafe(string $safe): Safe {
+    public function setSafe(string $safe) {
         $this->safe = $safe;
 
         return $this;

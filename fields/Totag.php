@@ -24,7 +24,7 @@ trait Totag
      *
      * @return $this
      */
-    public function setTotag(string $totag): Totag {
+    public function setTotag(string $totag) {
         $this->totag = $totag;
 
         return $this;

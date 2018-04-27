@@ -2,7 +2,6 @@
 
 namespace yeedomliu\workwx;
 
-
 class Agent extends Base
 {
 

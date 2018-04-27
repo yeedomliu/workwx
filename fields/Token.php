@@ -24,7 +24,7 @@ trait Token
      *
      * @return $this
      */
-    public function setToken(string $token): Token {
+    public function setToken(string $token) {
         $this->token = $token;
 
         return $this;

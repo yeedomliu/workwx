@@ -24,7 +24,7 @@ trait Encodingaeskey
      *
      * @return $this
      */
-    public function setEncodingaeskey(string $encodingaeskey): Encodingaeskey {
+    public function setEncodingaeskey(string $encodingaeskey) {
         $this->encodingaeskey = $encodingaeskey;
 
         return $this;

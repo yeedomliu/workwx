@@ -24,7 +24,7 @@ trait Position
      *
      * @return $this
      */
-    public function setPosition(string $position): Position {
+    public function setPosition(string $position) {
         $this->position = $position;
 
         return $this;

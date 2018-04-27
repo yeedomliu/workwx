@@ -24,7 +24,7 @@ trait Tagid
      *
      * @return $this
      */
-    public function setTagid(string $tagid): Tagid {
+    public function setTagid(string $tagid) {
         $this->tagid = $tagid;
 
         return $this;

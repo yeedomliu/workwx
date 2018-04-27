@@ -24,7 +24,7 @@ trait Id
      *
      * @return $this
      */
-    public function setId(string $id): Id {
+    public function setId(string $id) {
         $this->id = $id;
 
         return $this;

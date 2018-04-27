@@ -24,7 +24,7 @@ trait Type
      *
      * @return $this
      */
-    public function setType(string $type): Type {
+    public function setType(string $type) {
         $this->type = $type;
 
         return $this;

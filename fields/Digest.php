@@ -24,7 +24,7 @@ trait Digest
      *
      * @return $this
      */
-    public function setDigest(string $digest): Digest {
+    public function setDigest(string $digest) {
         $this->digest = $digest;
 
         return $this;

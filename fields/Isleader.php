@@ -24,7 +24,7 @@ trait Isleader
      *
      * @return $this
      */
-    public function setIsleader(string $isleader): Isleader {
+    public function setIsleader(string $isleader) {
         $this->isleader = $isleader;
 
         return $this;

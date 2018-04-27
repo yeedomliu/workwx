@@ -24,7 +24,7 @@ trait Telephone
      *
      * @return $this
      */
-    public function setTelephone(string $telephone): Telephone {
+    public function setTelephone(string $telephone) {
         $this->telephone = $telephone;
 
         return $this;

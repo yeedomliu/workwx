@@ -24,7 +24,7 @@ trait Enable
      *
      * @return $this
      */
-    public function setEnable(string $enable): Enable {
+    public function setEnable(string $enable) {
         $this->enable = $enable;
 
         return $this;

@@ -24,7 +24,7 @@ trait Url
      *
      * @return $this
      */
-    public function setUrl(string $url): Url {
+    public function setUrl(string $url) {
         $this->url = $url;
 
         return $this;

@@ -24,7 +24,7 @@ trait Isreportenter
      *
      * @return $this
      */
-    public function setIsreportenter(string $isreportenter): Isreportenter {
+    public function setIsreportenter(string $isreportenter) {
         $this->isreportenter = $isreportenter;
 
         return $this;

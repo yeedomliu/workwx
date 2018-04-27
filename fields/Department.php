@@ -24,7 +24,7 @@ trait Department
      *
      * @return $this
      */
-    public function setDepartment(string $department): Department {
+    public function setDepartment(string $department) {
         $this->department = $department;
 
         return $this;

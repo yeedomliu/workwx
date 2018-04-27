@@ -24,7 +24,7 @@ trait Msgtype
      *
      * @return $this
      */
-    public function setMsgtype(string $msgtype): Msgtype {
+    public function setMsgtype(string $msgtype) {
         $this->msgtype = $msgtype;
 
         return $this;

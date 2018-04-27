@@ -24,7 +24,7 @@ trait RedirectDomain
      *
      * @return $this
      */
-    public function setRedirectDomain(string $redirectDomain): RedirectDomain {
+    public function setRedirectDomain(string $redirectDomain) {
         $this->redirectDomain = $redirectDomain;
 
         return $this;

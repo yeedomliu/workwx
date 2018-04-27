@@ -24,7 +24,7 @@ trait ReportLocationFlag
      *
      * @return $this
      */
-    public function setReportLocationFlag(string $reportLocationFlag): ReportLocationFlag {
+    public function setReportLocationFlag(string $reportLocationFlag) {
         $this->reportLocationFlag = $reportLocationFlag;
 
         return $this;

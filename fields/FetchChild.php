@@ -24,7 +24,7 @@ trait FetchChild
      *
      * @return $this
      */
-    public function setFetchChild(string $fetchChild): FetchChild {
+    public function setFetchChild(string $fetchChild) {
         $this->fetchChild = $fetchChild;
 
         return $this;

@@ -24,7 +24,7 @@ trait Parentid
      *
      * @return $this
      */
-    public function setParentid(string $parentid): Parentid {
+    public function setParentid(string $parentid) {
         $this->parentid = $parentid;
 
         return $this;

@@ -24,7 +24,7 @@ trait ThumbMediaId
      *
      * @return $this
      */
-    public function setThumbMediaId(string $thumbMediaId): ThumbMediaId {
+    public function setThumbMediaId(string $thumbMediaId) {
         $this->thumbMediaId = $thumbMediaId;
 
         return $this;

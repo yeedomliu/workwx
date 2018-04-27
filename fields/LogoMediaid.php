@@ -24,7 +24,7 @@ trait LogoMediaid
      *
      * @return $this
      */
-    public function setLogoMediaid(string $logoMediaid): LogoMediaid {
+    public function setLogoMediaid(string $logoMediaid) {
         $this->logoMediaid = $logoMediaid;
 
         return $this;

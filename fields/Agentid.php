@@ -24,7 +24,7 @@ trait Agentid
      *
      * @return $this
      */
-    public function setAgentid(string $agentid): Agentid {
+    public function setAgentid(string $agentid) {
         $this->agentid = $agentid;
 
         return $this;

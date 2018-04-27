@@ -24,7 +24,7 @@ trait Appid
      *
      * @return $this
      */
-    public function setAppid(string $appid): Appid {
+    public function setAppid(string $appid) {
         $this->appid = $appid;
 
         return $this;

@@ -24,7 +24,7 @@ trait Party
      *
      * @return $this
      */
-    public function setParty(string $party): Party {
+    public function setParty(string $party) {
         $this->party = $party;
 
         return $this;

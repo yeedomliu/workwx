@@ -24,7 +24,7 @@ trait ContentSourceUrl
      *
      * @return $this
      */
-    public function setContentSourceUrl(string $contentSourceUrl): ContentSourceUrl {
+    public function setContentSourceUrl(string $contentSourceUrl) {
         $this->contentSourceUrl = $contentSourceUrl;
 
         return $this;

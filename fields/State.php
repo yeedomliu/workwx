@@ -24,7 +24,7 @@ trait State
      *
      * @return $this
      */
-    public function setState(string $state): State {
+    public function setState(string $state) {
         $this->state = $state;
 
         return $this;

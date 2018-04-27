@@ -24,7 +24,7 @@ trait HomeUrl
      *
      * @return $this
      */
-    public function setHomeUrl(string $homeUrl): HomeUrl {
+    public function setHomeUrl(string $homeUrl) {
         $this->homeUrl = $homeUrl;
 
         return $this;

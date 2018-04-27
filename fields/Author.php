@@ -24,7 +24,7 @@ trait Author
      *
      * @return $this
      */
-    public function setAuthor(string $author): Author {
+    public function setAuthor(string $author) {
         $this->author = $author;
 
         return $this;

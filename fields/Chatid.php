@@ -24,7 +24,7 @@ trait Chatid
      *
      * @return $this
      */
-    public function setChatid(string $chatid): Chatid {
+    public function setChatid(string $chatid) {
         $this->chatid = $chatid;
 
         return $this;

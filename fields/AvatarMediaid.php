@@ -24,7 +24,7 @@ trait AvatarMediaid
      *
      * @return $this
      */
-    public function setAvatarMediaid(string $avatarMediaid): AvatarMediaid {
+    public function setAvatarMediaid(string $avatarMediaid) {
         $this->avatarMediaid = $avatarMediaid;
 
         return $this;

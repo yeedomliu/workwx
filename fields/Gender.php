@@ -24,7 +24,7 @@ trait Gender
      *
      * @return $this
      */
-    public function setGender(string $gender): Gender {
+    public function setGender(string $gender) {
         $this->gender = $gender;
 
         return $this;

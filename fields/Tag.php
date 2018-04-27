@@ -24,7 +24,7 @@ trait Tag
      *
      * @return $this
      */
-    public function setTag(string $tag): Tag {
+    public function setTag(string $tag) {
         $this->tag = $tag;
 
         return $this;

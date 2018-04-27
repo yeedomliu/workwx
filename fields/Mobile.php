@@ -24,7 +24,7 @@ trait Mobile
      *
      * @return $this
      */
-    public function setMobile(string $mobile): Mobile {
+    public function setMobile(string $mobile) {
         $this->mobile = $mobile;
 
         return $this;

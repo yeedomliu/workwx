@@ -24,7 +24,7 @@ trait Userlist
      *
      * @return $this
      */
-    public function setUserlist(string $userlist): Userlist {
+    public function setUserlist(string $userlist) {
         $this->userlist = $userlist;
 
         return $this;

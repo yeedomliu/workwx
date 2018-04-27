@@ -24,7 +24,7 @@ trait CreatedAt
      *
      * @return $this
      */
-    public function setCreatedAt(string $createdAt): CreatedAt {
+    public function setCreatedAt(string $createdAt) {
         $this->createdAt = $createdAt;
 
         return $this;

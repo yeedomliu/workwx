@@ -24,7 +24,7 @@ trait ExternalProfile
      *
      * @return $this
      */
-    public function setExternalProfile(string $externalProfile): ExternalProfile {
+    public function setExternalProfile(string $externalProfile) {
         $this->externalProfile = $externalProfile;
 
         return $this;

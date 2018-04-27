@@ -24,7 +24,7 @@ trait Btntxt
      *
      * @return $this
      */
-    public function setBtntxt(string $btntxt): Btntxt {
+    public function setBtntxt(string $btntxt) {
         $this->btntxt = $btntxt;
 
         return $this;

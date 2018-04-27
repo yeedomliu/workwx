@@ -24,7 +24,7 @@ trait DepartmentId
      *
      * @return $this
      */
-    public function setDepartmentId(string $departmentId): DepartmentId {
+    public function setDepartmentId(string $departmentId) {
         $this->departmentId = $departmentId;
 
         return $this;

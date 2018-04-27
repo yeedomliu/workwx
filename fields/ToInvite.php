@@ -24,7 +24,7 @@ trait ToInvite
      *
      * @return $this
      */
-    public function setToInvite(string $toInvite): ToInvite {
+    public function setToInvite(string $toInvite) {
         $this->toInvite = $toInvite;
 
         return $this;

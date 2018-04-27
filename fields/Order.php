@@ -24,7 +24,7 @@ trait Order
      *
      * @return $this
      */
-    public function setOrder(string $order): Order {
+    public function setOrder(string $order) {
         $this->order = $order;
 
         return $this;

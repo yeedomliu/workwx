@@ -24,7 +24,7 @@ trait Picurl
      *
      * @return $this
      */
-    public function setPicurl(string $picurl): Picurl {
+    public function setPicurl(string $picurl) {
         $this->picurl = $picurl;
 
         return $this;

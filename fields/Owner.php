@@ -24,7 +24,7 @@ trait Owner
      *
      * @return $this
      */
-    public function setOwner(string $owner): Owner {
+    public function setOwner(string $owner) {
         $this->owner = $owner;
 
         return $this;

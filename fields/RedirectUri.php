@@ -24,7 +24,7 @@ trait RedirectUri
      *
      * @return $this
      */
-    public function setRedirectUri(string $redirectUri): RedirectUri {
+    public function setRedirectUri(string $redirectUri) {
         $this->redirectUri = $redirectUri;
 
         return $this;

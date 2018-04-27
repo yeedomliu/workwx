@@ -24,7 +24,7 @@ trait Extattr
      *
      * @return $this
      */
-    public function setExtattr(string $extattr): Extattr {
+    public function setExtattr(string $extattr) {
         $this->extattr = $extattr;
 
         return $this;

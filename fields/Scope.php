@@ -24,7 +24,7 @@ trait Scope
      *
      * @return $this
      */
-    public function setScope(string $scope): Scope {
+    public function setScope(string $scope) {
         $this->scope = $scope;
 
         return $this;

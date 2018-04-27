@@ -24,7 +24,7 @@ trait Partylist
      *
      * @return $this
      */
-    public function setPartylist(string $partylist): Partylist {
+    public function setPartylist(string $partylist) {
         $this->partylist = $partylist;
 
         return $this;

@@ -24,7 +24,7 @@ trait Email
      *
      * @return $this
      */
-    public function setEmail(string $email): Email {
+    public function setEmail(string $email) {
         $this->email = $email;
 
         return $this;

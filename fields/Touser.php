@@ -24,7 +24,7 @@ trait Touser
      *
      * @return $this
      */
-    public function setTouser(string $touser): Touser {
+    public function setTouser(string $touser) {
         $this->touser = $touser;
 
         return $this;

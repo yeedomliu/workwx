@@ -24,7 +24,7 @@ trait Name
      *
      * @return $this
      */
-    public function setName(string $name): Name {
+    public function setName(string $name) {
         $this->name = $name;
 
         return $this;

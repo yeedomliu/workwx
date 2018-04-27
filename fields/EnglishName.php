@@ -24,7 +24,7 @@ trait EnglishName
      *
      * @return $this
      */
-    public function setEnglishName(string $englishName): EnglishName {
+    public function setEnglishName(string $englishName) {
         $this->englishName = $englishName;
 
         return $this;

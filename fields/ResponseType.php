@@ -24,7 +24,7 @@ trait ResponseType
      *
      * @return $this
      */
-    public function setResponseType(string $responseType): ResponseType {
+    public function setResponseType(string $responseType) {
         $this->responseType = $responseType;
 
         return $this;

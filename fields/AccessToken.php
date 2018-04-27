@@ -24,7 +24,7 @@ trait AccessToken
      *
      * @return $this
      */
-    public function setAccessToken(string $accessToken): AccessToken {
+    public function setAccessToken(string $accessToken) {
         $this->accessToken = $accessToken;
 
         return $this;

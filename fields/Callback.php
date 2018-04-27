@@ -24,7 +24,7 @@ trait Callback
      *
      * @return $this
      */
-    public function setCallback(string $callback): Callback {
+    public function setCallback(string $callback) {
         $this->callback = $callback;
 
         return $this;

@@ -24,7 +24,7 @@ trait MediaId
      *
      * @return $this
      */
-    public function setMediaId(string $mediaId): MediaId {
+    public function setMediaId(string $mediaId) {
         $this->mediaId = $mediaId;
 
         return $this;

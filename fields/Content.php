@@ -24,7 +24,7 @@ trait Content
      *
      * @return $this
      */
-    public function setContent(string $content): Content {
+    public function setContent(string $content) {
         $this->content = $content;
 
         return $this;
